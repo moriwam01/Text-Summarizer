@@ -1,3 +1,3 @@
 from TextSummarizer.logging import logger
 
-logger.info(" to Text Summarizer")
+logger.info("Wlcome to Text Summarizer")
