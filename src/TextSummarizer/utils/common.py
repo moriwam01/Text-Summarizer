@@ -43,4 +43,4 @@ def read_yaml(path_to_yaml: Path) -> ConfigBox:
         for path in path_to_directories:
             os.makedirs(path, exist_ok=True)
             if verbose:
-                logger.info(f"created directory at: {path}")
+                logger.info(f"created directories at: {path}")
