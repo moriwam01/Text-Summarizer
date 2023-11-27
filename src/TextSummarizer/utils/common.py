@@ -7,8 +7,8 @@ from box import ConfigBox
 from pathlib import Path
 from typing import Any
 
-@ensure_annotations
 
+@ensure_annotations
 def read_yaml(path_to_yaml: Path) -> ConfigBox:
     """reads yaml file and resturns
 
@@ -17,15 +17,15 @@ def read_yaml(path_to_yaml: Path) -> ConfigBox:
 
     Raises:
         ValueError: if yaml file is empty
-        e: empty 
-        
+        e: empty
+
     Returns:
         ConfigBox: ConfigBox type
     """
     try:
-        with open(path_to_yaml) as  yaml_file:
+        with open(path_to_yaml) as yaml_file:
             content = yaml.safe_load(yaml_file)
-            logger.info(f"yaml file: {path_to_yaml} loaded successfully")"
+            logger.info(f"yaml file: {path_to_yaml} loaded successfully")
         return ConfigBox(content)
     except BoxValueError:
         raise ValueError(f"yaml file is empty")
@@ -33,7 +33,7 @@ def read_yaml(path_to_yaml: Path) -> ConfigBox:
         raise e
 
     @ensure_annotations
-    def create_directories(path_to_directories:list, verbose=True):
+    def create_directories(path_to_directories: list, verbose=True):
         """create list of directories
 
         Args:
